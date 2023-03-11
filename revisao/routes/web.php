@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('food');
 });
+
+Route::post('/routefood', ['uses' => 'App\Http\Controllers\FoodController@createFood']);
